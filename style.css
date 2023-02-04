@@ -353,3 +353,41 @@ header a {
   background-color: rgb(233, 233, 233);
   border-radius: 15px;
 }
+.head {
+  opacity: 0;
+}
+.head-1 {
+  opacity: 1;
+  transition: all 1.5s;
+}
+.head-2,
+.head-3,
+.head-4,
+.head-4,
+.head-5,
+.head-6 {
+  opacity: 0;
+  transition: all 1.5s;
+}
+.login {
+  opacity: 0;
+}
+.login-1 {
+  opacity: 1;
+  transition: all 1.5s;
+}
+.login-2,
+.login-3,
+.login-4,
+.login-5,
+.login-6 {
+  opacity: 0;
+  transition: all 1.5s;
+  z-index: 1;
+}
+.active {
+  opacity: 1;
+}
+.hide {
+  opacity: 0;
+}
