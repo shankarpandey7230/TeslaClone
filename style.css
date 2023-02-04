@@ -290,23 +290,31 @@ header a {
 .blur {
   position: absolute;
   width: 100%;
-  display: block;
+  display: none;
   height: 100vh;
   z-index: 99;
   transition: all 1s;
   backdrop-filter: blur(4px);
   background-color: #393c416e;
 }
+.blur.active {
+  display: block;
+}
 .hdn-side {
   position: absolute;
   right: 0;
   width: 310px;
-  transform: translateX(0);
+  opacity: 0;
+  transform: translateX(320px);
   transition: all 1.2s;
   z-index: 100;
   height: 100%;
   overflow: scroll;
   background-color: white;
+}
+.hdn-side.active {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 #mark {
