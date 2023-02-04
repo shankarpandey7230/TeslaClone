@@ -20,9 +20,9 @@ header {
   margin-right: 10px;
   z-index: 1;
   margin-left: 50px;
-  display: flex;
   justify-content: space-between;
   position: fixed;
+  display: flex;
 }
 header a {
   line-height: 30px;
@@ -34,7 +34,7 @@ header a {
   border-radius: 10px;
   cursor: pointer;
   font-weight: 600;
-  color: #343434;
+  color: rgb(34, 34, 34);
 }
 .mdl {
   margin-left: 200px;
@@ -44,6 +44,7 @@ header a {
   align-items: center;
   z-index: 5;
 }
+
 .mdl a:nth-child(6) {
   padding-right: 180px;
 }
@@ -85,22 +86,22 @@ header a {
 }
 .mdl a:nth-child(6):hover ~ .hover {
   opacity: 1;
-  left: 450px;
+  left: 460px;
   width: 105px;
 }
 .mdl a:nth-child(7):hover ~ .hover {
   opacity: 1;
-  left: 722px;
+  left: 740px;
   width: 60px;
 }
 .mdl a:nth-child(8):hover ~ .hover {
   opacity: 1;
-  left: 790px;
-  width: 85px;
+  left: 810px;
+  width: 80px;
 }
 .mdl a:nth-child(9):hover ~ .hover {
   opacity: 1;
-  left: 875px;
+  left: 890px;
   width: 65px;
 }
 .main-1 {
@@ -110,16 +111,18 @@ header a {
   width: 100%;
   height: 100vh;
   flex-flow: column nowrap;
+  scroll-snap-type: y mandatory;
 }
 .main-1 > div {
   text-align: center;
+  scroll-snap-align: center;
   flex: none;
   width: 100%;
   height: 100%;
 }
 .main-1 div img {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   object-fit: cover;
   object-position: center;
 }
@@ -136,7 +139,7 @@ header a {
   height: 40vh;
   align-items: center;
 }
-head h1 {
+.head h1 {
   font-size: 45px;
   font-weight: 500;
   color: rgb(61, 61, 61);
@@ -196,4 +199,91 @@ head h1 {
   height: 60px;
   font-size: 25px;
   color: rgb(75, 75, 75);
+  animation: updown 1.5s ease infinite;
+}
+@keyframes updown {
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(5px);
+  }
+  20% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(5px);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  80% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.main .head h1 {
+  animation: showspan 1s;
+}
+.main .head span {
+  animation: show 2s;
+}
+@keyframes show {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  40% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  70% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes showspan {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.login #order {
+  animation: order 1s;
+}
+@keyframes order {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.login #invn {
+  animation: invn 1s;
+}
+@keyframes invn {
+  0% {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
